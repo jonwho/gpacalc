@@ -21,11 +21,13 @@ angular
 		$stateProvider
 			.state('calculator', {
 				url: '/calculator',
-				templateUrl: 'views/calculator.html'
+				templateUrl: 'views/calculator.html',
+				controller: 'CalculatorCtrl'
 			})
 			.state('about', {
 				url: '/about',
-				templateUrl: 'views/about.html'
+				templateUrl: 'views/about.html',
+				controller: 'AboutCtrl'
 			})
 			.state('contact', {
 				url: '/contact',

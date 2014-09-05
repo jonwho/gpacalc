@@ -1,0 +1,55 @@
+<div class="page-content inset">
+	<div class="row">
+		<!-- Enter info here -->
+		<div class="col-md">
+			<div class="jumbotron">
+					<form ng-submit="submitForm()" novalidate class="pure-form pure-form-aligned">
+						<fieldset>
+						<div class="pure-control-group">
+							<label>Class Name</label> <input type="text" ng-model="class.name" placeholder="CSE, MATH, etc.."/>
+							<label>Class Code</label> <input type="text" ng-model="class.code" placeholder="100, 101, etc.."/>
+						</div>
+						<div class="pure-control-group">
+							<label>Class Units</label> <input type="text" ng-model="class.units" placeholder="2, 4, 5, etc..."/>
+							<label>Class Grade</label> <input type="text" ng-model="class.grade" placeholder="A, B, etc..."/>
+						</div>
+						<div class="pure-controls">
+							<input class="btn btn-success" type="submit" id="submit" value="Submit"/>
+							<button class="btn btn-danger" ng-click="clearForm()">Clear</button>
+						</div>
+						</fieldset>
+					</form>
+			</div>         
+		</div>
+		<!-- Class list over here -->
+		<div class="col-md">
+			<div class="jumbotron">
+				<center>
+				<table class="pure-table pure-table-bordered">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Class</th>
+							<th>Units</th>
+							<th>Grade</th>
+							<th>Total Units</th>
+							<th>GPA</th>
+						</tr>
+					</thead>
+					<tbody ng-repeat="class in classList">
+						<tr>
+							<td>{{ $index + 1 }}</td>
+							<td>{{ class.name }} {{ class.code }}</td>
+							<td>{{ class.units }}</td>
+							<td>{{ class.grade }}</td>
+							<td>{{ unitsList[$index] }}</td>
+							<td>{{ gpaList[$index] }}</td>
+						</tr>
+					</tbody>
+				</table>
+				</center>
+				<p>Ghetto restart for now. Refresh the page to start over</p>
+			</div>
+		</div>
+	</div>
+</div>
