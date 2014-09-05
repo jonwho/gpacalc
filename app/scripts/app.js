@@ -11,5 +11,6 @@
 angular
   .module('gpacalcApp', [
     'ngCookies',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ]);
