@@ -13,4 +13,7 @@ These steps should be done from the root directory of your app.
 3. git commit -m 'your commit msg'
 4. git subtree push --prefix dist origin gh-pages
 
-These steps will build your dist folder which is the compiled and minified version of your app. Then your app will include this dist folder (if dist is ignored in .gitignore make sure to remove it from that file first) and you will commit it to your branch. The last step will only push the dist folder contents into gh-pages branch on GitHub. Doing so means that it can find the index.html file and now you have a working app hosted by GitHub.
+
+If dist is ignored in .gitignore, make sure to remove that line first or else git won't be able to track your built app in dist directory. The above 4 steps will compile and minify your app and push the contents of the dist directory to the gh-pages branch. This is the branch that will serve your static web page by finding your index.html file.
+
+Further help can be found [here](http://stackoverflow.com/questions/17643381/how-to-upload-my-angularjs-static-site-to-github-pages)
