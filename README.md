@@ -3,6 +3,8 @@ gpacalc
 
 Test AngularJS build onto GitHub
 
+Try the app [here](http://jonwho.github.io/gpacalc/#/calculator)
+
 Steps to deploy AngularJS app with Yeoman
 =========================================
 These steps should be done from the root directory of your app.
