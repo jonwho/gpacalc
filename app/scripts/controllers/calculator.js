@@ -55,4 +55,31 @@ angular.module('gpacalcApp')
 		$scope.clearForm = function () {
 			$scope.class = null;
 		};
+
+		$scope.removeClass = function (item) {
+			var index = $scope.classList.indexOf(item);
+
+			if($scope.classList.length === 1) {
+				$scope.removeAllClasses();
+			}
+			else {
+				$scope.classList.splice(index, 1);
+			}
+		};
+
+		$scope.removeAllClasses = function () {
+			// reset all
+			resetVars();
+		};
+
+		function resetVars () {
+			totalUnits = 0.0;
+			totalScore = 0.0;
+			totalGPA = 0.0;
+			classScore = 0.0;
+
+			$scope.classList = [];
+			$scope.unitsList = [];
+			$scope.gpaList = [];
+		};
 	});
