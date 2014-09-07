@@ -19,7 +19,10 @@
 						</div>
 						<div class="pure-control-group">
 							<label>Class Grade</label>
-							<input type="text" ng-model="class.grade" placeholder="A, B, etc..." required/>
+							<select ng-model="class.letterGrade" ng-options="ele.letter for ele in letterGrades">
+								<option value="">Choose Grade</option>
+							</select>
+							<!-- <input type="text" ng-model="class.grade" placeholder="A, B, etc..." required/> -->
 						</div>
 						<div class="pure-controls">
 							<input ng-disabled="classForm.$invalid" class="btn btn-success" type="submit" id="submit" value="Submit"/>
@@ -49,7 +52,7 @@
 							<td>{{ $index + 1 }}</td>
 							<td>{{ class.name }} {{ class.code }}</td>
 							<td>{{ class.units }}</td>
-							<td>{{ class.grade }}</td>
+							<td>{{ class.letterGrade.letter }}</td>
 							<td>{{ unitsList[$index] }}</td>
 							<td>{{ gpaList[$index] }}</td>
 						</tr>

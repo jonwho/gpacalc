@@ -15,53 +15,66 @@ angular.module('gpacalcApp')
 		var totalUnits = 0.0;
 		var totalScore = 0.0;
 		var totalGPA = 0.0;
-
 		var classScore = 0.0;
 
+		$scope.letterGrades = [
+			{letter: 'A+', grade: 4.0},
+			{letter: 'A', grade: 4.0},
+			{letter: 'A-', grade: 3.7},
+			{letter: 'B+', grade: 3.3},
+			{letter: 'B', grade: 3.0},
+			{letter: 'B-', grade: 2.7},
+			{letter: 'C+', grade: 2.3},
+			{letter: 'C', grade: 2.0},
+			{letter: 'C-', grade: 1.7},
+			{letter: 'D', grade: 1.0},
+			{letter: 'F', grade: 0.0}
+		];
+
 		$scope.submitForm = function () {
-			var gradeToScore = 0.0;
-			switch($scope.class.grade) {
-				case 'A+':
-				case 'A':
-					gradeToScore = 4.0;
-					break;
-				case 'A-':
-					gradeToScore = 3.7;
-					break;
-				case 'B+':
-					gradeToScore = 3.3;
-					break;
-				case 'B':
-					gradeToScore = 3.0;
-					break;
-				case 'B-':
-					gradeToScore = 2.7;
-					break;
-				case 'C+':
-					gradeToScore = 2.3;
-					break;
-				case 'C':
-					gradeToScore = 2.0;
-					break;
-				case 'C-':
-					gradeToScore = 1.7;
-					break;
-				case 'D':
-					gradeToScore = 1.0;
-					break;
-				case 'F':
-					gradeToScore = 0.0;
-					break;
-				default:
-					gradeToScore = 0.0;
-			}
+			//var gradeToScore = 0.0;
+			// switch($scope.class.grade) {
+			// 	case 'A+':
+			// 	case 'A':
+			// 		gradeToScore = 4.0;
+			// 		break;
+			// 	case 'A-':
+			// 		gradeToScore = 3.7;
+			// 		break;
+			// 	case 'B+':
+			// 		gradeToScore = 3.3;
+			// 		break;
+			// 	case 'B':
+			// 		gradeToScore = 3.0;
+			// 		break;
+			// 	case 'B-':
+			// 		gradeToScore = 2.7;
+			// 		break;
+			// 	case 'C+':
+			// 		gradeToScore = 2.3;
+			// 		break;
+			// 	case 'C':
+			// 		gradeToScore = 2.0;
+			// 		break;
+			// 	case 'C-':
+			// 		gradeToScore = 1.7;
+			// 		break;
+			// 	case 'D':
+			// 		gradeToScore = 1.0;
+			// 		break;
+			// 	case 'F':
+			// 		gradeToScore = 0.0;
+			// 		break;
+			// 	default:
+			// 		gradeToScore = 0.0;
+			// }
 
 			// Update total unit count
 			totalUnits += parseFloat($scope.class.units, 10);
 			// Push current total unit count into list
 			$scope.unitsList.push(totalUnits);
 			// Get class score
-			classScore = gradeToScore * $scope.class.units;
+			classScore = $scope.class.letterGrade.grade * $scope.class.units;
 			// Get total score
 			totalScore += classScore;
 			// Calculate GPA
