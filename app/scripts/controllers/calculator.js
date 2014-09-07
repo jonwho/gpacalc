@@ -32,43 +32,6 @@ angular.module('gpacalcApp')
 		];
 
 		$scope.submitForm = function () {
-			//var gradeToScore = 0.0;
-			// switch($scope.class.grade) {
-			// 	case 'A+':
-			// 	case 'A':
-			// 		gradeToScore = 4.0;
-			// 		break;
-			// 	case 'A-':
-			// 		gradeToScore = 3.7;
-			// 		break;
-			// 	case 'B+':
-			// 		gradeToScore = 3.3;
-			// 		break;
-			// 	case 'B':
-			// 		gradeToScore = 3.0;
-			// 		break;
-			// 	case 'B-':
-			// 		gradeToScore = 2.7;
-			// 		break;
-			// 	case 'C+':
-			// 		gradeToScore = 2.3;
-			// 		break;
-			// 	case 'C':
-			// 		gradeToScore = 2.0;
-			// 		break;
-			// 	case 'C-':
-			// 		gradeToScore = 1.7;
-			// 		break;
-			// 	case 'D':
-			// 		gradeToScore = 1.0;
-			// 		break;
-			// 	case 'F':
-			// 		gradeToScore = 0.0;
-			// 		break;
-			// 	default:
-			// 		gradeToScore = 0.0;
-			// }
-
 			// Update total unit count
 			totalUnits += parseFloat($scope.class.units, 10);
 			// Push current total unit count into list
