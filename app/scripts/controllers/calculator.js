@@ -66,6 +66,8 @@ angular.module('gpacalcApp')
 			totalScore += classScore;
 			// Calculate GPA
 			totalGPA = totalScore / totalUnits;
+			// Use a precision of 3
+			totalGPA = totalGPA.toPrecision(3);
 			// Push GPA into list
 			$scope.gpaList.push(totalGPA);
 			// Push class into list
