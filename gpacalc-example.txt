@@ -1,0 +1,27 @@
+Class		Grade * Unit = Score		Total Units		Total Score
+
+UCSD Point Chart
+A+	=	4.0
+A	= 	4.0
+A-	= 	3.7
+
+B+	=	3.3
+B	=	3.0
+B-	=	2.7
+
+C+	=	2.3
+C   =	2.0
+C-	=	1.7
+
+D	=	1.0
+F	=	0.0
+
+Fall Quarter example
+CSE3	grade A, units 4	4 * 4.0 = 16
+CSE8A	grade A, units 4	4 * 4.0	= 16
+MATH20F grade B, units 3	4 * 3.0 = 12
+Total score = 44
+Total units = 12
+GPA = 44 / 12 = 3.67
+
+GPA = Total Score / Total Units
