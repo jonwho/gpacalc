@@ -11,6 +11,7 @@ angular.module('gpacalcApp')
 	.controller('CalculatorCtrl', function ($scope) {
 		$scope.classList = [];
 		$scope.unitsList = [];
+		$scope.scoreList = [];
 		$scope.gpaList = [];
 		var totalUnits = 0.0;
 		var totalScore = 0.0;
@@ -39,6 +40,8 @@ angular.module('gpacalcApp')
 			$scope.class.score = $scope.class.letterGrade.grade * $scope.class.units;
 			// Get total score
 			totalScore += $scope.class.score;
+			// Push the current total score into list
+			$scope.scoreList.push(totalScore);
 			// Calculate GPA
 			totalGPA = totalScore / totalUnits;
 			// Use a precision of 3
@@ -62,11 +65,11 @@ angular.module('gpacalcApp')
 				$scope.removeAllClasses();
 			}
 			else {
-				updateLists(index);
-
 				$scope.classList.splice(index, 1);
 				$scope.unitsList.splice(index, 1);
 				$scope.gpaList.splice(index, 1);
+
+				updateLists(index);
 			}
 		};
 
@@ -86,14 +89,20 @@ angular.module('gpacalcApp')
 		};
 
 		function updateLists(index) {
-			var tmp = $scope.classList[index];
-			console.log('name of class: ' + tmp.name);
-			console.log('unit count: ' + tmp.units);
+			var tmpClass = $scope.classList[index];
+			console.log('name of class: ' + tmpClass.name);
+			console.log('unit count: ' + tmpClass.units);
 
-			// update unitsList
-			for(var i = index + 1; i < $scope.unitsList.length; i++) {
-				//$scope.unitsList[index] -= tmp.units;
-				console.log($scope.unitsList[index]);
+			// update unitsList and scoreList
+			for(var i = index; i < $scope.unitsList.length; i++) {
+				$scope.unitsList[i] -= tmpClass.units;
+				$scope.scoreList[i] -= tmpClass.score;
+				console.log($scope.unitsList[i]);
+			}
+
+			// update gpaList
+			for(var i = index; i < $scope.gpaList.length; i++) {
+				$scope.gpaList[i] = ($scope.scoreList[i] / $scope.unitsList[i]).toPrecision(3);
 			}
 		}
 	});
