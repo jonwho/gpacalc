@@ -5,6 +5,14 @@ Test AngularJS build onto GitHub
 
 Try the app [here](http://jonwho.github.io/gpacalc/#/calculator)
 
+After cloning this repo make sure you do the following!
+```shell
+npm install
+bower install
+```
+
+To ensure dependencies aren't missing!
+
 Steps to deploy AngularJS app with Yeoman
 =========================================
 These steps should be done from the root directory of your app.

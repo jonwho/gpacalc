@@ -162,9 +162,11 @@ module.exports = function (grunt) {
 
     // Automatically inject Bower components into the app
     wiredep: {
-      options: {
-        cwd: '<%= yeoman.app %>'
-      },
+      // this line was causing build issues either comment it out or
+      // downgrade the grunt version to fix this build issue
+      //options: {
+        // cwd: '<%= yeoman.app %>'
+      //},
       app: {
         src: ['<%= yeoman.app %>/index.html'],
         ignorePath:  /\.\.\//

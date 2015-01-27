@@ -9,5 +9,5 @@
  */
 angular.module('gpacalcApp')
 	.controller('AboutCtrl', function ($scope) {
-		$scope.msg1 = 'As a transfer student I wanted to be able to calculate my cumulative GPA quickly so this is what I came up with!';
+		$scope.msg1 = 'As a student I wanted a quick way to calculate my term GPA without having to log in to the school system. So this is what I came up with!';
 	});
