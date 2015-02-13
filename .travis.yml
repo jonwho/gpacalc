@@ -7,3 +7,6 @@ before_script:
 env:
   global:
     secure: LrSseBv8y8oPhwch3qPDieUMznIIjozKtSrIYlQYCFiKfeSwm7viNkwyE6fpHK0KEYh3KeFnMWad0zJZUo4AIZoxQrPlBIZMSOHIeMuOeQ0rCTgs1ampJMj4u+q5RchBCIwirFvSU2HsrQSNXjuzVI/QjdSQ8Fe4AavWAQy0HGQ=
+
+after_success:
+- '[ "${TRAVIS_BRANCH}" = "develop" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
