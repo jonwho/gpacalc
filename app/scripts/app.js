@@ -12,6 +12,7 @@ angular
 	.module('gpacalcApp', [
 		'ngCookies',
 		'ngTouch',
+		'ngMaterial',
 		'ui.router'
 	])
 	.config(function($stateProvider, $urlRouterProvider) {

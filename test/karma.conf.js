@@ -22,9 +22,10 @@ module.exports = function(config) {
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/angular-cookies/angular-cookies.js',
       'bower_components/angular-touch/angular-touch.js',
-      'app/scripts/**/*.js',
-      'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'app/scripts/**/*.js'
+      //'test/mock/**/*.js',
+      //'test/spec/**/*.js'
     ],
 
     // list of files / patterns to exclude

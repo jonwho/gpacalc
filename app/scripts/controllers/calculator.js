@@ -86,7 +86,7 @@ angular.module('gpacalcApp')
 			$scope.classList = [];
 			$scope.unitsList = [];
 			$scope.gpaList = [];
-		};
+		}
 
 		function updateLists(index) {
 			var tmpClass = $scope.classList[index];
@@ -101,8 +101,8 @@ angular.module('gpacalcApp')
 			}
 
 			// update gpaList
-			for(var i = index; i < $scope.gpaList.length; i++) {
-				$scope.gpaList[i] = ($scope.scoreList[i] / $scope.unitsList[i]).toPrecision(3);
+			for(var j = index; j < $scope.gpaList.length; j++) {
+				$scope.gpaList[j] = ($scope.scoreList[j] / $scope.unitsList[j]).toPrecision(3);
 			}
 		}
 	});
