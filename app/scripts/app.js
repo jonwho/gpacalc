@@ -17,7 +17,7 @@ angular
 	])
 	.config(function($stateProvider, $urlRouterProvider) {
 
-		$urlRouterProvider.otherwise('/calculator');
+		$urlRouterProvider.otherwise('index.html');
 
 		$stateProvider
 			.state('calculator', {

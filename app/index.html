@@ -12,8 +12,6 @@
 		<!-- endbower -->
 		<!-- endbuild -->
 		<!-- build:css(.tmp) styles/main.css -->
-		<link rel="stylesheet" href="styles/main.css">
-		<link rel="stylesheet" href="styles/simple-sidebar.css">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<!-- endbuild -->
 
@@ -25,36 +23,25 @@
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-		<!-- Add your site or application content here -->
-		<div class="container">
-
-			<!-- Sidebar -->
-			<div id="sidebar-wrapper">
-				<ul class="sidebar-nav">
-					<li class="sidebar-brand"><a ui-sref="calculator">UCSD GPA Calculator</a></li>
-					<li><a ui-sref="calculator">Calculator</a></li>
-					<li><a ui-sref="about">About</a></li>
-					<li><a ui-sref="contact">Contact</a></li>
-				</ul>
-			</div>
-
-			<!-- Dynamic views -->
-			<div ui-view></div>
-
-			<!-- footer -->
-			<hr>
-			<footer>
-				<p>
-					<div>
-						&copy; Jon Ho 2015
-						<a href="http://github.com/jonwho"><i class="fa fa-github-square fa-lg pull-right"></i></a>
-						<a href="http://www.linkedin.com/in/jonwho/"><i class="fa fa-linkedin-square fa-lg pull-right"></i></a>
-						<a href="http://twitter.com/lj080805"><i class="fa fa-twitter-square fa-lg pull-right"></i></a>
-						<a href="mailto:housuilun@yahoo.com"><i class="fa fa-envelope fa-lg pull-right"></i></a>
-					</div>
-				</p>
-			</footer>
-		</div>
+		<md-content>
+    		<md-toolbar>
+      			<div class="md-toolbar-tools">
+        			<md-button class="md-icon-button" aria-label="Settings">
+          				<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        			</md-button>
+        			<h2>
+          				<span>Toolbar with Icon Buttons</span>
+        			</h2>
+        			<span flex></span>
+	        		<md-button class="md-icon-button" aria-label="Favorite">
+	          			<md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+	        		</md-button>
+	        		<md-button class="md-icon-button" aria-label="More">
+	          			<md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+	        		</md-button>
+      			</div>
+    		</md-toolbar>
+  		</md-content>
 
 		<!-- build:js(.) scripts/oldieshim.js -->
 		<!--[if lt IE 9]>
