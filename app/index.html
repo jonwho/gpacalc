@@ -17,6 +17,7 @@
 
 		<!-- Manual includes -->
 		<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	<body ng-app="gpacalcApp">
 		<!--[if lt IE 7]>
@@ -26,20 +27,91 @@
 		<md-content>
     		<md-toolbar>
       			<div class="md-toolbar-tools">
-        			<ng-md-icon icon="send" style="fill: white"></ng-md-icon>
+				<md-button>
+        				<ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
+				</md-button>
         			<h2>
           				<span>GPA Calculator</span>
         			</h2>
         			<span flex></span>
-	        		<md-button class="md-icon-button" aria-label="Favorite">
-	          			<md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
-	        		</md-button>
-	        		<md-button class="md-icon-button" aria-label="More">
-	          			<md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
-	        		</md-button>
       			</div>
     		</md-toolbar>
-  		</md-content>
+		</md-content>
+
+		<div layout="row" layout-wrap layout-margin layout-fill layout-align="space-around">
+		<div flex>
+			<h2>Your GPA</h2>
+			<!-- Inputs -->
+			<md-input-container>
+				<label>Enter GPA</label>
+				<input ng-model="">
+			</md-input-container>
+
+			<md-input-container>
+				<label>Enter Units</label>
+				<input ng-model="">
+			</md-input-container>
+
+			<!-- Outputs -->
+			<pre>GPA</pre>
+			<pre>Total Units</pre>
+		</div>
+		<div flex>
+			<h2>Add Courses</h2>
+		</div>
+		<div flex>
+			<h2>Your Courses</h2>	
+
+
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at elementum orci. Mauris mi turpis, luctus nec
+			lacus ac, porttitor vestibulum dolor. Mauris luctus lacus sed congue viverra. Donec orci eros, ullamcorper
+			sed metus et, molestie tincidunt sem. Sed ac velit sit amet turpis luctus aliquet in vitae orci. Fusce
+			molestie, tellus tincidunt elementum hendrerit, neque quam ornare nulla, id sodales tortor lectus eget
+			metus. Aenean eget condimentum ipsum. Phasellus pellentesque, felis at placerat finibus, arcu leo lobortis
+			eros, in vulputate elit magna ornare turpis. Quisque congue facilisis elit, in maximus metus ultrices sed.
+			Aliquam faucibus tempus dui a pharetra. Curabitur dolor turpis, rhoncus et massa nec, convallis dictum arcu.
+			Cras sollicitudin vitae sem eget dapibus. Curabitur volutpat egestas hendrerit. Fusce rhoncus arcu turpis,
+			vitae rhoncus dui tempor at. Sed at risus eget risus porttitor lobortis quis a ligula. Nam gravida sapien eu
+			ante blandit, eu luctus ligula iaculis.
+
+			Suspendisse placerat, nulla quis aliquam ornare, massa lacus posuere libero, sed finibus felis ipsum in
+			erat. Donec molestie, quam vitae consectetur dignissim, risus elit pretium ante, ac iaculis metus massa
+			consequat turpis. Cras feugiat semper risus eu laoreet. Phasellus commodo justo eros, a laoreet lorem
+			bibendum at. Praesent vehicula nunc sed sagittis egestas. Nam placerat, orci ac ullamcorper rhoncus, nisl
+			metus consectetur est, quis iaculis velit metus et ex. Aliquam ut suscipit erat. Pellentesque cursus a diam
+			ut faucibus. Donec sit amet pretium leo. Etiam vitae consectetur purus.
+
+			Curabitur nec nunc velit. Maecenas non odio accumsan libero posuere rutrum eu vel diam. Nam tristique velit
+			et eros sagittis fringilla. Ut dapibus lorem sit amet est viverra molestie. Nulla consequat consectetur elit
+			a gravida. Nam commodo turpis vel libero semper, in volutpat erat ultrices. Morbi lorem erat, vestibulum vel
+			volutpat ut, ultrices vitae felis. Sed accumsan sem at orci auctor, sed sagittis augue accumsan.
+
+			Donec vel elit ac orci consectetur eleifend. Nullam commodo lectus in metus convallis vehicula. Maecenas vel
+			rutrum eros. Maecenas non dignissim orci. Ut nibh metus, pretium dignissim elementum sit amet, ullamcorper
+			at sapien. Phasellus euismod vehicula urna, non auctor tellus viverra sit amet. Duis maximus ipsum at orci
+			sagittis, quis bibendum lectus auctor. Etiam volutpat, quam vulputate cursus commodo, mi diam ultricies
+			sapien, sit amet mattis orci augue quis lorem. Nulla efficitur orci velit, ut pulvinar sem mattis non. Ut
+			quis suscipit felis. Aenean suscipit imperdiet tincidunt. Vivamus sapien purus, mollis in turpis et,
+			tristique malesuada odio. Donec ac ipsum sit amet erat maximus pellentesque. Phasellus condimentum, est sed
+			mattis molestie, augue turpis ornare neque, in tristique nibh elit nec nibh. Donec varius semper feugiat.
+
+			Vestibulum leo nisl, rutrum sit amet leo in, ultricies euismod massa. Nulla metus enim, ultrices quis lectus
+			mattis, placerat aliquet justo. Pellentesque imperdiet, risus eu iaculis pretium, nunc elit lacinia massa,
+			at dictum sapien ante eget erat. Curabitur nulla mauris, mollis consequat porttitor at, congue ac turpis.
+			Maecenas ornare facilisis leo quis volutpat. Suspendisse potenti. Duis bibendum volutpat scelerisque. Sed
+			pharetra quam rutrum condimentum pulvinar. 
+		</div>
+
+		<!-- Footer -->
+		<div flex="100">
+			<div>
+				&copy; Jon Ho 2015
+				<a href="http://github.com/jonwho"><i class="fa fa-github-square fa-lg pull-right"></i></a>
+				<a href="http://www.linkedin.com/in/jonwho/"><i class="fa fa-linkedin-square fa-lg pull-right"></i></a>
+				<a href="http://twitter.com/lj080805"><i class="fa fa-twitter-square fa-lg pull-right"></i></a>
+				<a href="mailto:housuilun@yahoo.com"><i class="fa fa-envelope fa-lg pull-right"></i></a>
+			</div>
+		</div>
 
 		<!-- build:js(.) scripts/oldieshim.js -->
 		<!--[if lt IE 9]>
