@@ -13,6 +13,7 @@ angular
 		'ngCookies',
 		'ngTouch',
 		'ngMaterial',
+		'ngMdIcons', // for material design icons
 		'ui.router'
 	])
 	.config(function($stateProvider, $urlRouterProvider) {
