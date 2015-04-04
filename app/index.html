@@ -58,6 +58,21 @@
 		</div>
 		<div flex>
 			<h2>Add Courses</h2>
+			<md-autocomplete
+				ng-disabled="false"
+				md-no-cache="true"
+				md-selected-item="selected text"
+				md-search-text-change=""
+				md-selected-item-change=""
+				md-items=""
+				md-item-text=""
+				placeholder="Enter class name">
+				<span md-highlight-text=""
+				md-highlight-falgs=^i>{{ng-model goes
+					here}}</span>
+			</md-autocomplete>
+			<md-button class="md-raised md-primary">Add</md-button>
+			<md-button class="md-raised md-warn">Clear</md-button>
 		</div>
 		<div flex>
 			<h2>Your Courses</h2>	
