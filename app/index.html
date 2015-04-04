@@ -30,103 +30,96 @@
 				<md-button>
         				<ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
 				</md-button>
-        			<h2>
+        			<h1>
           				<span>GPA Calculator</span>
-        			</h2>
+        			</h1>
         			<span flex></span>
       			</div>
     		</md-toolbar>
 		</md-content>
 
-		<div layout="row" layout-wrap layout-margin layout-fill layout-align="space-around">
-		<div flex>
-			<h2>Your GPA</h2>
-			<!-- Inputs -->
-			<md-input-container>
-				<label>Enter GPA</label>
-				<input ng-model="">
-			</md-input-container>
+		<!-- All 3 columns need calculator controller info -->
+		<div ng-controller="CalculatorCtrl" layout="row" layout-wrap layout-margin layout-fill layout-align="space-around">
+			<div flex>
+				<h2>Your GPA</h2>
+				<!-- Inputs -->
+				<md-input-container>
+					<label>Enter GPA</label>
+					<input ng-model="">
+				</md-input-container>
 
-			<md-input-container>
-				<label>Enter Units</label>
-				<input ng-model="">
-			</md-input-container>
+				<md-input-container>
+					<label>Enter Units</label>
+					<input ng-model="">
+				</md-input-container>
 
-			<!-- Outputs -->
-			<pre>GPA</pre>
-			<pre>Total Units</pre>
-		</div>
-		<div flex>
-			<h2>Add Courses</h2>
-			<md-autocomplete
-				ng-disabled="false"
-				md-no-cache="true"
-				md-selected-item="selected text"
-				md-search-text-change=""
-				md-selected-item-change=""
-				md-items=""
-				md-item-text=""
-				placeholder="Enter class name">
-				<span md-highlight-text=""
-				md-highlight-falgs=^i>{{ng-model goes
-					here}}</span>
-			</md-autocomplete>
-			<md-button class="md-raised md-primary">Add</md-button>
-			<md-button class="md-raised md-warn">Clear</md-button>
-		</div>
-		<div flex>
-			<h2>Your Courses</h2>	
-
-
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at elementum orci. Mauris mi turpis, luctus nec
-			lacus ac, porttitor vestibulum dolor. Mauris luctus lacus sed congue viverra. Donec orci eros, ullamcorper
-			sed metus et, molestie tincidunt sem. Sed ac velit sit amet turpis luctus aliquet in vitae orci. Fusce
-			molestie, tellus tincidunt elementum hendrerit, neque quam ornare nulla, id sodales tortor lectus eget
-			metus. Aenean eget condimentum ipsum. Phasellus pellentesque, felis at placerat finibus, arcu leo lobortis
-			eros, in vulputate elit magna ornare turpis. Quisque congue facilisis elit, in maximus metus ultrices sed.
-			Aliquam faucibus tempus dui a pharetra. Curabitur dolor turpis, rhoncus et massa nec, convallis dictum arcu.
-			Cras sollicitudin vitae sem eget dapibus. Curabitur volutpat egestas hendrerit. Fusce rhoncus arcu turpis,
-			vitae rhoncus dui tempor at. Sed at risus eget risus porttitor lobortis quis a ligula. Nam gravida sapien eu
-			ante blandit, eu luctus ligula iaculis.
-
-			Suspendisse placerat, nulla quis aliquam ornare, massa lacus posuere libero, sed finibus felis ipsum in
-			erat. Donec molestie, quam vitae consectetur dignissim, risus elit pretium ante, ac iaculis metus massa
-			consequat turpis. Cras feugiat semper risus eu laoreet. Phasellus commodo justo eros, a laoreet lorem
-			bibendum at. Praesent vehicula nunc sed sagittis egestas. Nam placerat, orci ac ullamcorper rhoncus, nisl
-			metus consectetur est, quis iaculis velit metus et ex. Aliquam ut suscipit erat. Pellentesque cursus a diam
-			ut faucibus. Donec sit amet pretium leo. Etiam vitae consectetur purus.
-
-			Curabitur nec nunc velit. Maecenas non odio accumsan libero posuere rutrum eu vel diam. Nam tristique velit
-			et eros sagittis fringilla. Ut dapibus lorem sit amet est viverra molestie. Nulla consequat consectetur elit
-			a gravida. Nam commodo turpis vel libero semper, in volutpat erat ultrices. Morbi lorem erat, vestibulum vel
-			volutpat ut, ultrices vitae felis. Sed accumsan sem at orci auctor, sed sagittis augue accumsan.
-
-			Donec vel elit ac orci consectetur eleifend. Nullam commodo lectus in metus convallis vehicula. Maecenas vel
-			rutrum eros. Maecenas non dignissim orci. Ut nibh metus, pretium dignissim elementum sit amet, ullamcorper
-			at sapien. Phasellus euismod vehicula urna, non auctor tellus viverra sit amet. Duis maximus ipsum at orci
-			sagittis, quis bibendum lectus auctor. Etiam volutpat, quam vulputate cursus commodo, mi diam ultricies
-			sapien, sit amet mattis orci augue quis lorem. Nulla efficitur orci velit, ut pulvinar sem mattis non. Ut
-			quis suscipit felis. Aenean suscipit imperdiet tincidunt. Vivamus sapien purus, mollis in turpis et,
-			tristique malesuada odio. Donec ac ipsum sit amet erat maximus pellentesque. Phasellus condimentum, est sed
-			mattis molestie, augue turpis ornare neque, in tristique nibh elit nec nibh. Donec varius semper feugiat.
-
-			Vestibulum leo nisl, rutrum sit amet leo in, ultricies euismod massa. Nulla metus enim, ultrices quis lectus
-			mattis, placerat aliquet justo. Pellentesque imperdiet, risus eu iaculis pretium, nunc elit lacinia massa,
-			at dictum sapien ante eget erat. Curabitur nulla mauris, mollis consequat porttitor at, congue ac turpis.
-			Maecenas ornare facilisis leo quis volutpat. Suspendisse potenti. Duis bibendum volutpat scelerisque. Sed
-			pharetra quam rutrum condimentum pulvinar. 
-		</div>
-
-		<!-- Footer -->
-		<div flex="100">
-			<div>
-				&copy; Jon Ho 2015
-				<a href="http://github.com/jonwho"><i class="fa fa-github-square fa-lg pull-right"></i></a>
-				<a href="http://www.linkedin.com/in/jonwho/"><i class="fa fa-linkedin-square fa-lg pull-right"></i></a>
-				<a href="http://twitter.com/lj080805"><i class="fa fa-twitter-square fa-lg pull-right"></i></a>
-				<a href="mailto:housuilun@yahoo.com"><i class="fa fa-envelope fa-lg pull-right"></i></a>
+				<!-- Outputs -->
+				<pre>GPA</pre>
+				<pre>Total Units</pre>
 			</div>
-		</div>
+			<div flex>
+				<h2>Add Courses</h2>
+				<form ng-submit="submitForm()" role="form" name="classForm" novalidate>
+					<md-input-container flex>
+						<label>Class Name</label>
+						<input type="text" ng-model="class.name" placeholder="CSE, MATH, etc.." required/>
+					</md-input-container>
+					<md-input-container flex>
+						<label>Class Code</label>
+						<input type="text" ng-model="class.code" placeholder="100, 101, etc.." required/>
+					</md-input-container>
+					<md-input-container flex>
+						<label>Class Units</label>
+						<input type="number" min="1" step="1" ng-model="class.units" placeholder="2, 4, 5, etc..." required/>
+					</md-input-container>
+					<md-input-container flex>
+						<md-select ng-model="class.letterGrade" placeholder="Choose Grade" required>
+							<md-select-label>Choose Grade</md-select-label>
+							<md-option ng-value="ele" ng-repeat="ele in letterGrades">{{ele.letter}}</md-option>
+						</md-select>
+					</md-input-container>
+					<md-button ng-disabled="classForm.$invalid" class="md-raised md-primary" type="submit">Add</md-button>
+					<md-button ng-click="clearForm()" class="md-raised md-warn">Clear</md-button>
+				</form>
+			</div>
+			<div flex>
+				<h2>Your Courses</h2>
+				<table class="table table-striped table-bordered">
+					<thead ng-show="classList.length > 0">
+						<tr>
+							<th>#</th>
+							<th>Class</th>
+							<th>Units</th>
+							<th>Grade</th>
+							<th>Total Units</th>
+							<th>GPA</th>
+							<th><a href ng-click="removeAllClasses()">Delete All</a></th>
+						</tr>
+					</thead>
+					<tbody ng-repeat="class in classList">
+						<tr>
+							<td>{{ $index + 1 }}</td>
+							<td>{{ class.name }} {{ class.code }}</td>
+							<td>{{ class.units }}</td>
+							<td>{{ class.letterGrade.letter }}</td>
+							<td>{{ unitsList[$index] }}</td>
+							<td>{{ gpaList[$index] }}</td>
+							<td><a href ng-click="removeClass(class)">[X]</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- Footer -->
+			<div flex="100">
+				<div layout-margin>
+					&copy; Jon Ho 2015
+					<a href="http://github.com/jonwho"><i class="fa fa-github-square fa-lg pull-right"></i></a>
+					<a href="http://www.linkedin.com/in/jonwho/"><i class="fa fa-linkedin-square fa-lg pull-right"></i></a>
+					<a href="http://twitter.com/lj080805"><i class="fa fa-twitter-square fa-lg pull-right"></i></a>
+					<a href="mailto:housuilun@yahoo.com"><i class="fa fa-envelope fa-lg pull-right"></i></a>
+				</div>
+		</div><!--/flex-layout-->
 
 		<!-- build:js(.) scripts/oldieshim.js -->
 		<!--[if lt IE 9]>
