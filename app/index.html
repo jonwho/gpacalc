@@ -38,25 +38,8 @@
     		</md-toolbar>
 		</md-content>
 
-		<!-- All 3 columns need calculator controller info -->
+		<!-- Both columns need calculator controller info -->
 		<div ng-controller="CalculatorCtrl" layout="row" layout-wrap layout-margin layout-fill layout-align="space-around">
-			<div flex>
-				<h2>Your GPA</h2>
-				<!-- Inputs -->
-				<md-input-container>
-					<label>Enter GPA</label>
-					<input type="number" min="0.0" step="any" ng-model="currentGPA">
-				</md-input-container>
-
-				<md-input-container>
-					<label>Enter Units</label>
-					<input type="number" min="0.0" step="any" ng-model="currentUnits">
-				</md-input-container>
-
-				<!-- Outputs -->
-				<pre>GPA</pre>
-				<pre>Total Units</pre>
-			</div>
 			<div flex>
 				<h2>Add Courses</h2>
 				<form ng-submit="submitForm()" role="form" name="classForm" novalidate>
@@ -98,13 +81,13 @@
 					</thead>
 					<tbody ng-repeat="class in classList">
 						<tr>
-							<td>{{ $index + 1 }}</td>
-							<td>{{ class.name }} {{ class.code }}</td>
-							<td>{{ class.units }}</td>
-							<td>{{ class.letterGrade.letter }}</td>
-							<td>{{ unitsList[$index] }}</td>
-							<td>{{ gpaList[$index] }}</td>
-							<td><a href ng-click="removeClass(class)">[X]</a></td>
+							<td align="center">{{ $index + 1 }}</td>
+							<td align="center">{{ class.name }} {{ class.code }}</td>
+							<td align="center">{{ class.units }}</td>
+							<td align="center">{{ class.letterGrade.letter }}</td>
+							<td align="center">{{ unitsList[$index] }}</td>
+							<td align="center">{{ gpaList[$index] }}</td>
+							<td align="center"><a href ng-click="removeClass(class)">[X]</a></td>
 						</tr>
 					</tbody>
 				</table>
