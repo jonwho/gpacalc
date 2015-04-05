@@ -31,7 +31,7 @@
         				<ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
 				</md-button>
         			<h1>
-          				<span>GPA Calculator</span>
+          				<span>UC San Diego GPA Calculator</span>
         			</h1>
         			<span flex></span>
       			</div>
@@ -57,11 +57,13 @@
 							<label>Class Units</label>
 							<input type="number" min="1" step="1" ng-model="class.units" placeholder="2, 4, 5, etc..." required/>
 						</md-input-container>
-							<md-select ng-model="class.letterGrade" placeholder="Choose Grade" required>
-								<md-option value="ele.grade" ng-value="ele" ng-repeat="ele in letterGrades">{{ele.letter}}</md-option>
-							</md-select>
-						<md-button ng-disabled="classForm.$invalid" class="md-raised md-primary" type="submit">Add</md-button>
-						<md-button ng-click="clearForm()" class="md-raised md-warn">Clear</md-button>
+						<md-select ng-model="class.letterGrade" placeholder="Choose Grade" required>
+							<md-option value="ele.grade" ng-value="ele" ng-repeat="ele in letterGrades">{{ele.letter}}</md-option>
+						</md-select>
+						<div layout="row" layout-margin layout-align="center center" flex>
+							<md-button style="margin: 25px; width: 75px;" ng-disabled="classForm.$invalid" class="md-raised md-primary" type="submit">Add</md-button>
+							<md-button style="width: 75px;" ng-click="clearForm()" class="md-raised md-warn">Clear</md-button>
+						</div>
 					</form>
 				</div>
 
@@ -135,5 +137,5 @@
 		<script src="bower_components/angular-aria/angular-aria.js"></script>
 		<script src="bower_components/angular-animate/angular-animate.js"></script>
 		<script src="bower_components/angular-material/angular-material.js"></script>
-</body>
+	</body>
 </html>
