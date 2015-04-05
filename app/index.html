@@ -57,12 +57,9 @@
 						<label>Class Units</label>
 						<input type="number" min="1" step="1" ng-model="class.units" placeholder="2, 4, 5, etc..." required/>
 					</md-input-container>
-					<md-input-container flex>
 						<md-select ng-model="class.letterGrade" placeholder="Choose Grade" required>
-							<md-select-label>Choose Grade</md-select-label>
-							<md-option ng-value="ele" ng-repeat="ele in letterGrades">{{ele.letter}}</md-option>
+							<md-option value="ele.grade" ng-value="ele" ng-repeat="ele in letterGrades">{{ele.letter}}</md-option>
 						</md-select>
-					</md-input-container>
 					<md-button ng-disabled="classForm.$invalid" class="md-raised md-primary" type="submit">Add</md-button>
 					<md-button ng-click="clearForm()" class="md-raised md-warn">Clear</md-button>
 				</form>
