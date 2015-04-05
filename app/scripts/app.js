@@ -13,11 +13,12 @@ angular
 		'ngCookies',
 		'ngTouch',
 		'ngMaterial',
+		'ngMdIcons', // for material design icons
 		'ui.router'
 	])
 	.config(function($stateProvider, $urlRouterProvider) {
 
-		$urlRouterProvider.otherwise('/calculator');
+		$urlRouterProvider.otherwise('index.html');
 
 		$stateProvider
 			.state('calculator', {

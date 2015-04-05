@@ -65,11 +65,11 @@ angular.module('gpacalcApp')
 				$scope.removeAllClasses();
 			}
 			else {
+				updateLists(index);
+
 				$scope.classList.splice(index, 1);
 				$scope.unitsList.splice(index, 1);
 				$scope.gpaList.splice(index, 1);
-
-				updateLists(index);
 			}
 		};
 
@@ -94,15 +94,19 @@ angular.module('gpacalcApp')
 			console.log('unit count: ' + tmpClass.units);
 
 			// update unitsList and scoreList
-			for(var i = index; i < $scope.unitsList.length; i++) {
+			for(var i = $scope.unitsList.length - 1; i > index; i--) {
 				$scope.unitsList[i] -= tmpClass.units;
 				$scope.scoreList[i] -= tmpClass.score;
 				console.log($scope.unitsList[i]);
 			}
 
 			// update gpaList
-			for(var j = index; j < $scope.gpaList.length; j++) {
+			for(var j = $scope.gpaList.length; j > index; j--) {
 				$scope.gpaList[j] = ($scope.scoreList[j] / $scope.unitsList[j]).toPrecision(3);
 			}
+
+			// also need to update local variables for next time when using submitForm
+			totalScore -= tmpClass.score;
+			totalUnits -= tmpClass.units;
 		}
 	});
