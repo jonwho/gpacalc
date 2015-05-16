@@ -13,8 +13,8 @@ bower install
 
 To ensure dependencies aren't missing!
 
-Steps to deploy AngularJS app with Yeoman
-=========================================
+Steps to deploy AngularJS app onto gh-pages
+===========================================
 These steps should be done from the root directory of your app.
 
 
